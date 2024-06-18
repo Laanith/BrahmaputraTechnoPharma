@@ -5,8 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Template for Brahmaputra TechnoPharmaceuticals webpage</p>
+        Basic template for website development
       </header>
     </div>
   );
