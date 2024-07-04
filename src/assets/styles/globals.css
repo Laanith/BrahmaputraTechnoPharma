@@ -22,6 +22,11 @@
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    letter-spacing: 20%;
     text-transform: capitalize;
+}
+
+
+.capital-text {
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }

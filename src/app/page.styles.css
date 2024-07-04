@@ -1,0 +1,26 @@
+.radial-yellow {
+  background: radial-gradient(#fff, rgba(255, 255, 174, 0.6));
+  background: -webkit-radial-gradient(#fff, rgba(255, 255, 174, 0.6));
+  background: -o-radial-gradient(#fff, rgba(255, 255, 174, 0.6));
+  background: -moz-radial-gradient(#fff, rgba(255, 255, 174, 0.6));
+}
+
+.black-text-stroke {
+  -webkit-text-stroke: 0.5px black;
+}
+
+.black-text-shadow {
+  text-shadow: none;
+  transition: all 150ms;
+}
+
+.black-text-shadow:hover {
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.159);
+  transition: all 150ms;
+}
+
+
+.text-shadow-none {
+  text-shadow: none;
+  -webkit-text-stroke: none;
+}
