@@ -39,7 +39,7 @@ export default function Home() {
         </div>
         <div className="w-fit h-fit flex flex-col justify-center py-10 xl:w-[50%] xl:h-full lg:self-center">
         <h1 className="text-primary black-text-stroke font-extrabold text-2xl px-8 py-4 font-inter text-center align-middle sm:px-40 md:text-4xl lg:text-[40px] xl:px-20  lg:text-center ">
-          We are <span className="text-primaryYellow black-text-shadow">India’s first</span> activated carbon manufacturers that use tea leaves as raw material.
+          <span className="text-primaryYellow black-text-shadow">India’s first</span> activated carbon manufacturers that use tea leaves as raw material.
         </h1>
         <br/>
         <span className="font-open text-base bg-primaryYellow text-primary px-4 py-2 font-normal mx-auto text-shadow-none md:text-xl">Explore Products</span>

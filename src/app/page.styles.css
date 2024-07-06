@@ -5,9 +5,7 @@
   background: -moz-radial-gradient(#fff, rgba(255, 255, 174, 0.6));
 }
 
-.black-text-stroke {
-  -webkit-text-stroke: 0.5px black;
-}
+
 
 .black-text-shadow {
   text-shadow: none;
