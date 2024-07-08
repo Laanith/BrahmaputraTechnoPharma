@@ -1,0 +1,85 @@
+.mui-icon:hover {
+    fill: "#65A47A" !important;
+
+}
+
+
+@media screen and (max-width : 639px){
+    #BUTTON-HOLDER {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+
+
+@media screen and (min-width : 640px ) and ( max-width : 767px){
+    #BUTTON-HOLDER {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+
+    #left-button , #right-button{
+        transform: scale(2);
+    }
+}
+
+
+
+@media screen and (min-width : 768px ) and ( max-width : 1023px){
+    #BUTTON-HOLDER {
+        display: flex;
+        z-index: 1000;
+        width: 100%;
+        position: absolute;
+        bottom : 40%;
+        left : 0;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    #left-button , #right-button{
+        transform: scale(3);
+    }
+
+}
+
+
+
+@media screen and (min-width : 1024px ) and ( max-width : 1279px){
+    #BUTTON-HOLDER {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width : 100%;
+        position : absolute;
+        bottom : -10%;
+        left : 0
+    }
+
+    #left-button , #right-button{
+        transform: scale(2);
+    }
+}
+
+
+
+@media screen and (min-width : 1280px ) {
+    #BUTTON-HOLDER {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width : 100%;
+        position : absolute;
+        bottom : -10%;
+        left : 0
+    }
+
+    #left-button , #right-button{
+        transform: scale(2);
+    }
+}
