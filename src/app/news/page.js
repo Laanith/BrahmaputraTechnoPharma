@@ -1,13 +1,17 @@
 import Card from "@/components/Card/Card";
 import teamImg from "@/assets/images/team.jpg";
 import teamWorkImg from "@/assets/images/teamwork.jpg";
+import productsImg from "@/assets/images/products.webp";
+import bioTechImg from "@/assets/images/Bioengineering.webp";
+import handShakeImg from "@/assets/images/handshake.webp";
+import achievementsImg from "@/assets/images/achievements.webp";
 
 const News = () => {
   const data = [
-    { title: "Latest Products", link: "/", imgSrc: teamImg },
-    { title: "Latest Tech", link: "/", imgSrc: teamWorkImg },
-    { title: "Recent Agreements", link: "/", imgSrc: teamImg },
-    { title: "Recent Achievements", link: "/", imgSrc: teamWorkImg },
+    { title: "Latest Products", link: "/", imgSrc: productsImg },
+    { title: "Latest Technologies", link: "/", imgSrc: bioTechImg },
+    { title: "Recent Agreements", link: "/", imgSrc: handShakeImg },
+    { title: "Recent Achievements", link: "/", imgSrc: achievementsImg },
   ];
   return (
     <main className="flex flex-col  p-10">

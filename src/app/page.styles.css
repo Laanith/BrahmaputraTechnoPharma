@@ -1,8 +1,8 @@
 .radial-yellow {
-  background: radial-gradient(#fff, rgba(255, 255, 174, 0.6));
   background: -webkit-radial-gradient(#fff, rgba(255, 255, 174, 0.6));
   background: -o-radial-gradient(#fff, rgba(255, 255, 174, 0.6));
   background: -moz-radial-gradient(#fff, rgba(255, 255, 174, 0.6));
+  background: radial-gradient(#fff, rgba(255, 255, 174, 0.6));
 }
 
 

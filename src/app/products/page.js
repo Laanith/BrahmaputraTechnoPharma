@@ -12,7 +12,7 @@ function Products() {
     <h1 className="font-bold font-inter text-center pt-10 text-2xl lg:text-3xl lg:pt-0">Our Products</h1>
     <div className="flex flex-col gap-10 lg:flex-row lg:justify-around">
       <div className="w-full flex font-open capital-text text-[8px] md:text-xs pt-10 lg:py-4 lg:justify-end">
-        <div className="grid grid-cols-2 gap-4 lg:gap-0 w-[80%] xl:w-[60%] mx-auto lg:mx-0 lg:self-end lg:mr-[140px]">
+        <div className="grid grid-cols-2 gap-4 lg:gap-0 w-[80%] xl:w-[60%] mx-auto lg:mx-0 lg:self-end lg:mr-[140px] font-bold">
           <div className="flex-col text-center mx-auto justify-between">
             <Image className="mx-auto" height={75} src={LotionSVG} alt="svg" />
             <p className="self-end py-4">toiletries</p>
@@ -49,7 +49,7 @@ function Products() {
       <div className="w-full min-h-max mb-10 lg:mb-0 lg:flex lg:flex-col">
         <h1 className="text-primary font-inter font-extrabold text-center text-3xl p-3 px-10 lg:my-auto lg:w-[80%] xl:w-[80%]
         md:text-4xl lg:text-[36px] black-text-stroke">
-          <span className="text-black">Activated Carbon</span> is not only a product itself but can also be a raw material for myriad set of applications
+          <span className="text-black">Activated Carbon</span>{" "}is both a standalone product and a versatile raw material for numerous applications.
         </h1>
       </div>
     </div>

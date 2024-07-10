@@ -22,8 +22,10 @@ nav {
 
 #navbar li {
     list-style: none;
-    padding: 0 1.25rem;
+    margin: 0 1.25rem;
+    padding : 0;
     position: relative;
+    transition : all 0.15s;
 }
 
 #navbar li a {
@@ -31,16 +33,33 @@ nav {
     font-size: 1rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+
 }
 
 #navbar li:hover ,
 #navbar li.active:hover {
-    color : black;
+    transition : all 0.15s;
+    /* border-bottom : 2px solid grey;  */
+
 }
 
-#navbar li.active {
-    color : yellow;
-}
+
+
+#navbar li:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: all .15s ease;
+  }
+
+#navbar li:hover:after {
+    width: 100%;
+    background: white;
+  }
+
 
 
 #mobile {
