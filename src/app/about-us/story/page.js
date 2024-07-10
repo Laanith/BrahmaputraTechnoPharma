@@ -6,6 +6,7 @@ import timelineDot from "@/assets/svg/timeline-dot.svg";
 import Image from "next/image";
 import { Chrono } from "react-chrono";
 import { useEffect, useState } from "react";
+import useScreenSize from "@/scripts/useScreenSize";
 
 function ChronoTimeLine() {
   const items = [
@@ -44,16 +45,11 @@ function ChronoTimeLine() {
 }
 
 function Node({ time, description, orientation, setCurrentDesc }) {
-  const [hover, setHover] = useState(false);
-  const [isNotDesktop, setIsNotDesktop] = useState(window.innerWidth < 1280);
-  const updateMedia = () => {
-    setIsNotDesktop(window.innerWidth < 1280);
-  };
 
-  useEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  });
+  const {width, height } = useScreenSize();
+  const [hover, setHover] = useState(false);
+  const [isNotDesktop, setIsNotDesktop] = useState(width < 1280);
+
 
   return (
     <span
