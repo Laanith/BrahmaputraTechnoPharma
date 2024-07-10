@@ -34,7 +34,7 @@ export default function Home() {
 
     <>
       <main className="flex flex-col gap-8 md:gap-16 xl:flex-row xl:gap-0 xl:justify-between">
-        <div className="relative mx-auto p-16 rounded-full radial-yellow">
+        <div className="relative mx-auto my-auto p-16 rounded-full radial-yellow">
           <Image className="mx-auto md:w-[160px] lg:w-[300px] scale-[0.8]" src={plantCarbon} alt="image" width={300} height={300} />
           {/* <div className="absolute top-0 left-0 w-full h-full rounded-full border-[100px] border-primaryYellow pointer-events-none"></div> */}
         </div>
