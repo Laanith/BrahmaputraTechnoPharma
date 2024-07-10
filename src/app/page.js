@@ -43,7 +43,7 @@ export default function Home() {
           <span className="text-[#f99f5f] black-text-shadow">India&#39;s first</span> tea-leaf based super activated carbon manufacturers
         </h1>
         <br/>
-        <span className="font-open capital-text text-base bg-primaryYellow text-primary px-4 py-2 font-normal mx-auto text-shadow-none"><Link href="/products" >Explore Products</Link></span>
+        <span className="font-open capital-text text-base bg-primaryYellow text-primary px-4 py-2 font-normal text-center mx-auto text-shadow-none"><Link href="/products" >Explore Products</Link></span>
         </div>
       </main>
     </>
