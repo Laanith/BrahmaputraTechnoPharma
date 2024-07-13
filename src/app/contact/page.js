@@ -11,7 +11,7 @@ const Contact = () => {
         Contact
       </h1>
       <div className="flex flex-col gap-10 lg:flex-row xl:gap-0 justify-around">
-        <div className=" flex flex-col justify-center text-center">
+        <div className="flex flex-col justify-center text-center">
           <LocationOnIcon
             fontSize="large"
             
@@ -22,12 +22,34 @@ const Contact = () => {
                 
             }}
           />
-          <p className="font-bold my-2 border-b-2 border-primary w-[40%] mx-auto">Address</p>
+          <p className="font-bold my-2 border-b-2 border-primary w-[40%] mx-auto"><span className="text-nowrap">Registered Office</span></p>
           <p className="px-20">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type{" "}
+            C/o Mr. SK Chanda<br/>
+            Near ICICI Bank<br/>
+            P.O Duliajan<br/>
+            District : Dirbrugarh<br/>
+            Assam, 786602<br/>
+          </p>
+        </div>
+
+        <div className="flex flex-col justify-center text-center">
+          <LocationOnIcon
+            fontSize="large"
+            
+            sx={{
+              fill: primaryColor,
+              marginX: "auto",
+
+                
+            }}
+          />
+          <p className="font-bold my-2 border-b-2 border-primary w-[40%] mx-auto">R&D facility</p>
+          <p className="px-20">
+            Tissue Culture Lab, 4th Floor<br/>
+            BioNEST<br/>
+            Research Park<br/>
+            IIT Guwahati Campus<br/>
+            Amingaon, Assam, 781039<br/>
           </p>
         </div>
         <div className="flex flex-col justify-center text-center">
@@ -40,12 +62,9 @@ const Contact = () => {
             }}
           />
           <p className="font-bold my-2 border-b-2 border-primary w-[40%] mx-auto ">Phone</p>
-          <p className="px-20">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type{" "}
-          </p>
+          <a className="px-20 text-nowrap"  href="tel:+918812016167" >
++91{" "}88120{" "}16167
+          </a>
         </div>
         <div className=" flex flex-col justify-center text-center">
           <EmailRounded
@@ -57,12 +76,9 @@ const Contact = () => {
             }}
           />
           <p className="font-bold my-2 border-b-2 border-primary w-[40%] mx-auto">Mail</p>{" "}
-          <p className="px-20">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type{" "}
-          </p>
+          <a className="px-20" href="mailto:office@btpbharat.com">
+            office@btpbharat.com
+          </a>
         </div>
       </div>
     </main>
