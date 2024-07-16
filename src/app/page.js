@@ -1,5 +1,5 @@
 // import Image from "next/image";
-// import plantCarbon from '../assets/images/plant-carbon.png';
+// import plantCarbon from '../assets/images/plant-carbon.webp';
 // export default function Home() {
 //   return (
 // <>
@@ -15,7 +15,7 @@
 
 
 import Image from "next/image";
-import plantCarbon from '../assets/images/plant-carbon-removebg.png';
+import plantCarbon from '../assets/images/plant-carbon-removebg.webp';
 import './page.styles.css';
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -35,16 +35,16 @@ export default function Home() {
 
     <>
       <main className="flex flex-col gap-8 md:gap-16 xl:flex-row xl:gap-0 xl:justify-between">
-        <div className="relative mx-auto my-auto p-16 rounded-full radial-yellow">
-          <Image className="mx-auto md:w-[160px] lg:w-[300px] scale-[0.8]" src={plantCarbon} alt="image" width={300} height={300} />
+        <div className="relative mx-auto my-auto p-16 rounded-full radial-yellow moving">
+          <Image className="mx-auto md:w-[160px] lg:w-[300px] scale-[1] transition-none" src={plantCarbon} alt="image" width={300} height={300} />
           {/* <div className="absolute top-0 left-0 w-full h-full rounded-full border-[100px] border-primaryYellow pointer-events-none"></div> */}
         </div>
         <div className="w-fit h-fit flex flex-col justify-center py-10 xl:w-[50%] xl:h-full lg:self-center">
         <h1 className="text-primary black-text-stroke font-extrabold text-2xl px-8 py-4 font-inter text-center align-middle sm:px-40 md:text-4xl lg:text-[40px] xl:px-20  lg:text-center ">
-          <span className="text-[#f99f5f] black-text-shadow">India&#39;s first</span> tea-leaf based super activated carbon manufacturers
+          <span className="text-[#f99f5f] black-text-shadow">India&#39;s first</span> <br/>tea-leaf based <br></br><span className="text-black">super activated carbon</span> producers
         </h1>
         <br/>
-        <span className="font-open capital-text text-base bg-primaryYellow text-primary px-4 py-2 font-normal text-center mx-auto text-shadow-none"><Link href="/products" >Explore <br/> Products</Link></span>
+        <span className="font-open capital-text text-base bg-primaryYellow text-primary px-4 py-2 text-center mx-auto text-shadow-none font-bold"><Link href="/products" >Explore <br/> Products</Link></span>
         </div>
       </main>
     </>

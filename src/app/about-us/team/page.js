@@ -1,6 +1,6 @@
 "use client";
 
-import teamMemberImage from "@/assets/images/miles-image.jpg";
+import teamMemberImage from "@/assets/images/miles-image.webp";
 import Image from "next/image";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -14,14 +14,14 @@ import "./page.styles.css";
 import { useState, useEffect } from "react";
 
 const TeamPage = () => {
-  const [index, setIndex] = useState(0);
 
   const data = [
+
     {
-      name: "Somnath Chanda",
+      name: "Ms.Medhi, CEO",
       image: teamMemberImage,
       description:
-        "somnath is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "At the helm of our company is Ms. Medhi, whose strategic vision and unwavering dedication have been instrumental in steering the startup through its formative years. Her leadership is characterized by a clear focus on long-term goals, a commitment to fostering innovation, and an ability to inspire and motivate the team. Ms. Medhi’s adeptness in navigating the complex landscape of the startup ecosystem has led us to achieve significant milestones and secure crucial funding.",
       socials: {
         facebook: "/",
         instagram: "/",
@@ -29,10 +29,10 @@ const TeamPage = () => {
       },
     },
     {
-      name: "Drishti Medhi",
+      name: "Somnath Chanda, CTO",
       image: teamMemberImage,
       description:
-        "balayya is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "Our Chief Technology Officer, Somnath Chanda, is the technical mastermind behind our innovative solutions. With deep knowledge of the latest technological advancements and exceptional problem-solving skills, Somnath ensures our products and services remain cutting-edge and effective. He oversees the development and implementation of technology strategies, manages technical teams, and maintains a robust, scalable infrastructure. His contributions are crucial to our competitive edge in the industry.",
       socials: {
         facebook: "/",
         instagram: "/",
@@ -40,10 +40,10 @@ const TeamPage = () => {
       },
     },
     {
-      name: "Gaurav Medhi",
+      name: "Mr.Medhi, CMO",
       image: teamMemberImage,
       description:
-        "coco-cola pepsi is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, ",
+        "The creative force behind our marketing strategies is Mr. Medhi, our Chief Marketing Officer. His innovative approach to marketing has significantly increased our brand visibility and market presence. Mr. Medhi excels in understanding market trends, consumer behavior, and developing compelling marketing campaigns that resonate with our target audience. His work ensures that our message reaches the right people, thereby driving growth and customer engagement. His ability to adapt to changing market conditions and leverage new marketing channels has been instrumental in our success.",
       socials: {
         facebook: "/",
         instagram: "/",
@@ -52,10 +52,22 @@ const TeamPage = () => {
     },
 
     {
-      name: "surya",
+      name: "Mr.Borthakur, COO",
       image: teamMemberImage,
       description:
-        "surya pepsi is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "As the Chief Operating Officer, Mr. Borthakur is the backbone of our operational framework. His role is crucial in ensuring the smooth execution of day-to-day activities, optimizing processes, and enhancing overall efficiency. With a strategic approach to operations management, Mr. Borthakur has been successful in streamlining workflows, reducing costs, and improving productivity. His operational expertise allows the rest of the team to focus on their core areas, knowing that the operational aspects are in capable hands.",
+      socials: {
+        facebook: "/",
+        instagram: "/",
+        linkedIn: "/",
+      },
+    },
+
+    {
+      name: "Dr.Dutta & Surmaita, Advisors",
+      image: teamMemberImage,
+      description:
+        "Our advisors, Dr. Dutta and Surmaita, bring a wealth of knowledge and experience to our team. Dr. Dutta’s academic and industry expertise provides us with a strong foundation in research and development, ensuring that our solutions are scientifically sound and innovative. Surmaita’s strategic insights and business acumen offer invaluable guidance on market positioning, growth strategies, and risk management. Their combined input helps us make informed decisions and navigate the complexities of the startup world with confidence.",
       socials: {
         facebook: "/",
         instagram: "/",
@@ -69,94 +81,14 @@ const TeamPage = () => {
       <h1 className="font-inter font-extrabold text-black text-3xl mb-10 lg:mb-10 text-center">
         Our Team
       </h1>
-      <div className="flex flex-col gap-10 lg:flex-row xl:gap-0 justify-around relative">
-        <div className="flex flex-col justify-center w-[100%] mx-auto">
-          <Image
-            className="mx-auto w-[100%] md:w-[300px] lg:w-[200px]"
-            src={data[index].image}
-            alt="team-member-image"
-          />
-          <p className="font-open font-bold capital-text mx-auto text-2xl py-4 text-center">
-            {data[index].name}
-          </p>
-          <div className="flex flex-row mx-auto">
-            {data[index].socials.facebook ? (
-              <Link href={data[index].socials.facebook}>
-                <span className="mui-icon">
-                {" "}
-
-                  <FacebookIcon fontSize="large" />
-                </span>
-              </Link>
-            ) : (
-              <></>
-            )}
-            {data[index].socials.instagram ? (
-              <Link href={data[index].socials.instagram}>
-                <span className="mui-icon">
-                {" "}
-
-                  <InstagramIcon fontSize="large" />
-                </span>
-              </Link>
-            ) : (
-              <></>
-            )}
-            {data[index].socials.linkedIn ? (
-              <Link href={data[index].socials.linkedIn}>
-                <span className="mui-icon">
-                  {" "}
-                  <LinkedInIcon fontSize="large" />
-                </span>
-              </Link>
-            ) : (
-              <></>
-            )}
-          </div>
-        </div>
-        <div className="font-open capital-text text-sm text-center flex justify-center bg-blue-50 md:px-10 xl:mt-[80px]">
-          {data[index].description}
-        </div>
-        <span className=" " id="BUTTON-HOLDER">
-          <span className="mui-icon"
-            id="left-button"
-            onClick={() => {
-              let newIndex = index - 1;
-              if (newIndex < 0) setIndex(data.length - 1);
-              else setIndex(newIndex);
-            }}
-          >
-            {" "}
-            <KeyboardArrowLeftIcon
-              sx={{
-                cursor : "pointer",
-                marginY: "auto",
-                display: "inline",
-                alignSelf: "flex-start",
-                zIndex: 100,
-              }}
-            />
-          </span>
-          <span className="mui-icon"
-            id="right-button"
-            onClick={() => {
-              let newIndex = index + 1;
-              if (newIndex > data.length - 1) setIndex(0);
-              else setIndex(newIndex);
-            }}
-          >
-            {" "}
-            <KeyboardArrowRightIcon
-              sx={{
-                cursor : "pointer",
-                marginY: "auto",
-                alignSelf: "flex-end",
-                display: "inline",
-                zIndex: 100,
-              }}
-            />
-          </span>
-        </span>
+      <div className="flex flex-col gap-10 justify-around relative lg:px-20">
+        {data.map(obj => {
+          return (<div key={obj.name}>
+            <p><strong>{obj.name}</strong></p>
+            <br/>
+            <p>{obj.description}</p>
+          </div>);
+        })}
       </div>
     </main>
   );

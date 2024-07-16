@@ -8,48 +8,12 @@ import { Chrono } from "react-chrono";
 import { useEffect, useState } from "react";
 import useScreenSize from "@/scripts/useScreenSize";
 
-function ChronoTimeLine() {
-  const items = [
-    {
-      title: "May 2019",
-      cardTitle: "Dunkirk",
-      cardSubtitle:
-        "Men of the British Expeditionary Force (BEF) wade out to..",
-    },
-    {
-      title: "June 2021",
-      cardTitle: "Dunkirk",
-      cardSubtitle:
-        "Men of the British Expeditionary Force (BEF) wade out to..",
-    },
-    {
-      title: "August 2022",
-      cardTitle: "Dunkirk",
-      url: "http://www.history.com",
-      cardSubtitle:
-        "Men of the British Expeditionary Force (BEF) wade out to..",
-    },
-  ];
-  return (
-    <div>
-      <Chrono
-        mode="VERTICAL_ALTERNATING"
-        items={items}
-        disableToolbar={true}
-        borderLessCards={true}
-        cardHeight={50}
-        cardLess={true}
-      />
-    </div>
-  );
-}
 
-function Node({ time, description, orientation, setCurrentDesc }) {
 
-  const {width, height } = useScreenSize();
+function Node({ time, image, description, orientation, primer, setCurrentDesc, setCurrentImage }) {
+  const { width, height } = useScreenSize();
   const [hover, setHover] = useState(false);
   const [isNotDesktop, setIsNotDesktop] = useState(width < 1280);
-
 
   return (
     <span
@@ -64,6 +28,7 @@ function Node({ time, description, orientation, setCurrentDesc }) {
       }}
       onClick={() => {
         setCurrentDesc(description);
+        setCurrentImage(image)
       }}
     >
       <span className="px-4 my-auto text-[10px] text-center md:text-base border border-blue-600 rounded-s align-text-top">
@@ -127,35 +92,36 @@ function Node({ time, description, orientation, setCurrentDesc }) {
           <circle cx="13" cy="13" r="8" fill="#FFE768" />
         </svg>
       </span>
-      {
-        isNotDesktop ? <></> : (
-          hover ? (
-            <span className="bg-gray-200 rounded-sm px-2 text-[8px] md:text-base my-auto z-10">
-              {description.length > 10
-                ? description.slice(0, 10) + "..."
-                : description}
-            </span>
-          ) : (
-            <></>
-          )
-        )
-      }
+      {isNotDesktop ? (
+        <></>
+      ) : hover ? (
+        <span className="bg-gray-200 rounded-sm px-2 text-[8px] md:text-base my-auto z-10">
+          {primer.length > 10
+            ? primer.slice(0, 10) + "..."
+            : primer}
+        </span>
+      ) : (
+        <></>
+      )}
     </span>
   );
 }
 
 const StoryPage = () => {
   const [currentDesc, setCurrentDesc] = useState(
-    "A deep dive into the story of the birth..."
+    "Our startup journey has been a blend of determination, innovation, and resilience. It began as a ‘dorm room startup’ from a hostel room as a University spin-off (also known as university spin-outs for start-up companies that transform intellectual properties filed from educational institutes that otherwise wouldn’t have been commercialized. Source: WIKIPEDIA) based on the data from the research, we first pitched at the Assam Biotech Conclave, organized by the Guwahati Biotech Park. Despite not being selected, this initial setback fuelled our resolve to innovate and excel."
   );
+
+
+  const [currentImage, setCurrentImage] = useState(null);
 
   return (
     <main>
-      <h1 className="font-bold font-inter text-center pt-10 text-2xl lg:text-3xl lg:pt-0">
+      <h1 className="font-bold font-inter text-center pt-10 text-2xl lg:text-3xl lg:pt-0 text-black">
         Our Story
       </h1>
       <div className="flex flex-col gap-10 lg:flex-row lg:justify-around">
-        <div className="w-full font-open capital-text text-[8px] md:text-xs pt-10 lg:py-4 justify-center  text-center">
+        <div className="w-full font-open  text-[8px] md:text-xs pt-10 lg:py-4 justify-center  text-center">
           <div className="block">
             <Timeline
               mode="alternate"
@@ -163,50 +129,71 @@ const StoryPage = () => {
                 {
                   children: (
                     <Node
-                      time={"2024"}
-                      description={"something_a"}
+                      time={"2016"}
+                      description={
+                        "In 2016, our hard work paid off when we won the 1st Prize at the IITG-TIC Innovation Competition, organized by IIT Guwahati. This significant milestone reinforced our belief in our vision and capabilities."
+                      }
+                      primer = {"1st prize @ TIC Innovation"}
                       orientation={"right"}
                       setCurrentDesc={setCurrentDesc}
+                      setCurrentImage = {setCurrentImage}
                     />
                   ),
                 },
                 {
                   children: (
                     <Node
-                      time={"2024"}
-                      description={"something_b"}
+                      time={"2019"}
+                      description={
+                        "Our momentum continued in 2019 when we secured the 2nd Prize at the NE-Hackathon organized by ASTU, Govt. of Assam. In July 2019, we pooled some funds among our family members and thought to start our venture as a Family Business under the Joint Hindu Family Business also known as Hindu Undivided Family (HUF). "
+                      }
+                      primer = {"2nd prize @ NE-hackathon"}
+
                       orientation={"left"}
                       setCurrentDesc={setCurrentDesc}
+                      setCurrentImage = {setCurrentImage}
                     />
                   ),
                 },
                 {
                   children: (
                     <Node
-                      time={"2024"}
-                      description={"something_c"}
+                      time={"2021"}
+                      description={
+                        "Our vision to include more inclusivity for talent pooling led to our registration as a private limited company on 27th December 2021 as Brahmaputra TechnoPharmaceuticals Pvt. Ltd. and the establishment of our lab-cum-office facility at the Guwahati Biotech Park then located inside the IIT Guwahati campus. Despite the challenges of the COVID-19 pandemic, we thrived by winning the COVID-19 Grand Challenge at IIT Guwahati and being shortlisted in several prestigious competitions. Our innovative streak saw us secure the 2nd runner-up position at the UNDO CORONA Ideation Challenge and top positions at the IKP Idea Exposition and BRTC Mapping the Changemakers of North East Region of India."
+                      }
+                      primer = {"Registration as private limited company"}
                       orientation={"right"}
                       setCurrentDesc={setCurrentDesc}
+                      setCurrentImage = {setCurrentImage}
                     />
                   ),
                 },
                 {
                   children: (
                     <Node
-                      time={"2024"}
-                      description={"something_d"}
+                      time={"2021"}
+                      description={
+                        "In 2021, our achievements included winning the 1st Position in the Online Ideathon Challenge organized by Bio-NEST NIPER-G (Guwahati), the Rise & Shine event organized by IIC, Bineswar Brahma Engineering College, Kokrajhar, and the 2nd round of the TIDE 2.0 IDEATHON organized by Assam Don Bosco University. We gained valuable experiences through programs like the RKV-RAFTAAR online classes by IIM Kashipur and selections for the Agri-Launchpad by the Venture Center, NCL Pune, and the NE Launchpad organized by KIIT, Bhubaneswar. In 2021 we shifted our labs to BioNEST, Research Park at IIT Guwahati."
+                      }
+                      primer = {"1st position at Online Ideathon Challenge"}
                       orientation={"left"}
                       setCurrentDesc={setCurrentDesc}
+                      setCurrentImage = {setCurrentImage}
                     />
                   ),
                 },
                 {
                   children: (
                     <Node
-                      time={"2024"}
-                      description={"something_e"}
+                      time={"2022"}
+                      description={
+                        "In 2022, we achieved a major milestone by securing a Rs. 50 lakh grant through the BIG NER program and in 2024, being selected in the ideation stage of the Start-up Competition of the Assam State Bamboo Mission, further validating our innovative potential. On 15th July 2024, we hosted our dedicated website to connect with our stallholders."
+                      }
+                      primer = {"Rs.50 Lakh grant by BIG-NER Program"}
                       orientation={"right"}
                       setCurrentDesc={setCurrentDesc}
+                      setCurrentImage = {setCurrentImage}
                     />
                   ),
                 },
@@ -215,18 +202,10 @@ const StoryPage = () => {
                     <Node
                       time={"2024"}
                       description={"something_f"}
+                      primer={"something_f"}
                       orientation={"left"}
                       setCurrentDesc={setCurrentDesc}
-                    />
-                  ),
-                },
-                {
-                  children: (
-                    <Node
-                      time={"2024"}
-                      description={"something_g"}
-                      orientation={"right"}
-                      setCurrentDesc={setCurrentDesc}
+                      setCurrentImage = {setCurrentImage}
                     />
                   ),
                 },
@@ -234,10 +213,8 @@ const StoryPage = () => {
             />
           </div>
         </div>
-        <div className="w-full min-h-max mb-10 lg:mb-0 lg:flex lg:flex-col">
-          <h1
-            className="block text-black font-open capital-text text-center text-base p-3 px-10 lg:my-auto lg:w-[80%] xl:w-[80%]"
-          >
+        <div className="w-full min-h-max mb-10 lg:mb-0 lg:flex lg:flex-row ">
+          <h1 className="block font-open text-base p-3 px-10 lg:my-auto lg:w-[80%] xl:w-[80%]">
             {currentDesc}
           </h1>
         </div>

@@ -1,4 +1,17 @@
 @tailwind base;
+
+
+
+
+@layer base {
+  html {
+    @apply text-gray-500;
+  }
+  
+
+}
+
+
 @tailwind components;
 @tailwind utilities;
 
@@ -21,7 +34,6 @@
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
-  text-transform: capitalize;
 }
 
 .capital-text {

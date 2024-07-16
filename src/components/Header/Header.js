@@ -28,12 +28,8 @@ export default function MenuAppBar() {
       <nav className="my-auto">
         <Link href="/" className="ml-0">
           <span className="flex flex-row">
-            <Image src={CompanyLogo} alt="company-logo" className="w-[60px] mr-2 object-contain sm:w-[80px] sm:text-2xl sm:mr-4 lg:w-[150px] lg:mr-[1.25rem]"/>
-            <h1 className={"font-bold text-xs sm:text-base lg:text-4xl w-[40%] h-full my-auto"}
-            
-
-            
-            
+            <Image src={CompanyLogo} alt="company-logo" className="w-[60px] mr-2 object-contain sm:w-[80px] sm:text-2xl sm:mr-4 lg:w-[120px] lg:mr-[1.25rem]"/>
+            <h1 className={"font-bold text-xs sm:text-base lg:text-3xl w-[40%] h-full my-auto font-inter"}
             >
               Brahmaputra
               <br />
@@ -110,6 +106,14 @@ export default function MenuAppBar() {
             }}
           >
             <Link href="/news">News</Link>
+          </li>
+          <li
+            className={isActive("/careers") ? "border-white border-b-2" : ""}
+            onClick={() => {
+              if (clicked) setClicked(false);
+            }}
+          >
+            <Link href="/careers">Careers</Link>
           </li>
         </ul>
         <div id="mobile">

@@ -6,6 +6,7 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+
     extend: {
       colors : {
         primary : "#65A47A",
@@ -19,6 +20,13 @@ module.exports = {
         // "gradient-conic":
         //   "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+
+      fontSize : {
+        base : ['18px', '28px']
+      },
+      
+      textColor : {
+      }
     },
   },
   plugins: [],

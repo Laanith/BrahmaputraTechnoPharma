@@ -22,9 +22,9 @@ const Contact = () => {
                 
             }}
           />
-          <p className="font-bold my-2 border-b-2 border-primary w-[40%] mx-auto"><span className="text-nowrap">Registered Office</span></p>
+          <p className="font-bold my-2 border-b-2 border-primary w-[40%] mx-auto"><span className="text-wrap  sm:text-nowrap">Registered Office</span></p>
           <p className="px-20">
-            C/o Mr. SK Chanda<br/>
+            Brahmaputra <br/><span className="text-wrap sm:text-nowrap">TechnoPharmaceuticals Pvt. Ltd.,</span> <br/>
             Near ICICI Bank<br/>
             P.O Duliajan<br/>
             District : Dirbrugarh<br/>
@@ -62,8 +62,8 @@ const Contact = () => {
             }}
           />
           <p className="font-bold my-2 border-b-2 border-primary w-[40%] mx-auto ">Phone</p>
-          <a className="px-20 text-nowrap"  href="tel:+918812016167" >
-+91{" "}88120{" "}16167
+          <a className="px-20 text-nowrap text-center align-middle flex flex-col h-full"  href="tel:+918812016167" >
+<span className="my-auto">+91{" "}88120{" "}16167</span>
           </a>
         </div>
         <div className=" flex flex-col justify-center text-center">
@@ -76,8 +76,8 @@ const Contact = () => {
             }}
           />
           <p className="font-bold my-2 border-b-2 border-primary w-[40%] mx-auto">Mail</p>{" "}
-          <a className="px-20" href="mailto:office@btpbharat.com">
-            office@btpbharat.com
+          <a className="px-20 h-full text-center align-middle flex flex-col" href="mailto:office@btpbharat.com">
+            <span className="my-auto">office@btpbharat.com</span>
           </a>
         </div>
       </div>

@@ -6,7 +6,7 @@ const Card = ({data}) => {
         <div className='p-4 md:p-8 lg:p-4 justify-center'>
             <Image className='mx-auto object-cover xl:w-[300px] aspect-auto' src={data.imgSrc} alt="image-apt-for-context" />
         </div>
-        <div className='px-4 font-inter font-extrabold text-2xl text-center'>{data.title}</div>
+        <div className='px-4 font-inter font-extrabold text-2xl text-center text-black'>{data.title}</div>
     </div> );
 }
  
