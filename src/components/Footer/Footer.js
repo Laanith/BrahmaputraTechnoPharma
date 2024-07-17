@@ -12,7 +12,7 @@ function Footer() {
         <p className="px-4 md:px-0 hover-dotted-underline">Copyright © Brahmaputra TechnoPharmaceuticals Pvt. Ltd.</p>
         <p className="capital-text hover-dotted-underline"><Link href="/genera" >Genera</Link></p>
         <p className="capital-text hover-dotted-underline"><Link href="/contact" >Contact Us</Link></p>
-        <p className="capital-text hover-dotted-underline">Sitemap</p>
+        <p className="capital-text hover-dotted-underline"><Link href="/sitemap">Sitemap</Link></p>
         <span className="flex flex-row gap-2 mx-auto lg:mx-0">
             <XIcon />
             <FacebookIcon/>

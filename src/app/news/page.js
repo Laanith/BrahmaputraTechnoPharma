@@ -17,7 +17,7 @@ const News = () => {
       <h1 className="font-inter font-extrabold text-black text-3xl mb-10 lg:mb-10 text-center">
         News
       </h1>
-      <div className="flex flex-col gap-10 xl:flex-row">
+      <div className="flex flex-col gap-10 xl:flex-row justify-around">
         {data.map((obj) => (
           <Link key={obj.link} href={obj.link}>
           <Card key={obj.link} data={obj} />
