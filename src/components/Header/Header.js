@@ -67,17 +67,17 @@ export default function MenuAppBar() {
           </li>
 
           <li
-            className={isActive("/about-us") ? "border-white border-b-2" : ""}
+            className={isActive("/about-us/") ? "border-white border-b-2" : ""}
             onClick={() => {
               if (clicked) setClicked(false);
             }}
           >
-            <Link href="/about-us">About Us</Link>
+            <Link href="/about-us/">About Us</Link>
           </li>
 
           <li
             className={
-              isActive("/research-and-development")
+              isActive("/research-and-development/")
                 ? "border-white border-b-2"
                 : ""
             }
@@ -85,35 +85,35 @@ export default function MenuAppBar() {
               if (clicked) setClicked(false);
             }}
           >
-            <Link href="/research-and-development">R&D</Link>
+            <Link href="/research-and-development/">R&D</Link>
           </li>
 
           <li
-            className={isActive("/products") ? "border-white border-b-2" : ""}
+            className={isActive("/products/") ? "border-white border-b-2" : ""}
             onClick={() => {
               if (clicked) setClicked(false);
             }}
           >
-            <Link href="/products" className="">
+            <Link href="/products/" className="">
               Products
             </Link>
           </li>
 
           <li
-            className={isActive("/news") ? "border-white border-b-2" : ""}
+            className={isActive("/news/") ? "border-white border-b-2" : ""}
             onClick={() => {
               if (clicked) setClicked(false);
             }}
           >
-            <Link href="/news">News</Link>
+            <Link href="/news/">News</Link>
           </li>
           <li
-            className={isActive("/careers") ? "border-white border-b-2" : ""}
+            className={isActive("/careers/") ? "border-white border-b-2" : ""}
             onClick={() => {
               if (clicked) setClicked(false);
             }}
           >
-            <Link href="/careers">Careers</Link>
+            <Link href="/careers/">Careers</Link>
           </li>
         </ul>
         <div id="mobile">

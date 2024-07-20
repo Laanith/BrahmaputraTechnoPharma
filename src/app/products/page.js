@@ -97,7 +97,7 @@ function Products() {
             className="text-primary font-inter font-extrabold text-center text-3xl p-3 px-10 lg:my-auto lg:w-[80%] xl:w-[80%]
         md:text-4xl lg:text-[36px] black-text-stroke"
           >
-            <span className="text-black">Activated Carbon</span> is both a
+            <span className="text-black">Activated Carbon</span> is a
             standalone product and a versatile raw material for numerous health
             applications.
           </h1>

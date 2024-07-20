@@ -1,5 +1,5 @@
 import Image from "next/image";
-import toiletriesImage from "@/assets/images/toiletries.webp";
+import toiletriesImage from "@/assets/images/toiletries-new.jpg";
 
 const ToiletriesPage = () => {
     return (
@@ -14,7 +14,15 @@ const ToiletriesPage = () => {
           <div className="w-full min-h-max mb-10 lg:mb-0 lg:flex lg:flex-col">
             <ul className="p-10 my-auto list-disc text-base">
 
-            
+
+<li><strong>Charcoal Shampoos:</strong><br/>
+Activated charcoal can help remove impurities and excess oil from the scalp, making it a great ingredient for baby shampoos.
+</li>
+
+
+<li><strong>Charcoal Body Wash:</strong><br/>
+Helps to deeply cleanse the skin and remove toxins, suitable for gentle baby skin.    
+</li>
             
   <li>
     <strong>Effective Germ-Killing Soaps:</strong><br/>Our activated carbon-based soaps are designed to effectively eliminate germs and bacteria, providing superior hygiene and cleanliness.

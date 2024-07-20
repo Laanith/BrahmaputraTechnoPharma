@@ -39,13 +39,6 @@ const CosmeticsPage = () => {
               benefits.
             </li>
             <li>
-              <strong>Herbal Water Purification:</strong>
-              <br />
-              Herbal activated carbon filters enhance water purification
-              systems, combining herbal benefits with effective filtration for
-              clean and healthy drinking water.
-            </li>
-            <li>
               <strong>Multi-Purpose Herbal Combinations:</strong>
               <br />
               By integrating activated carbon with various herbal extracts, we
